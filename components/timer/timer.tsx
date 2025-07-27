@@ -33,8 +33,8 @@ export default function Timer() {
 
   return (
     <div className="sticky top-0 left-0 w-full z-50 flex justify-center bg-neutral-950">
-      <div className=" text-white py-4 gap-4 items-center flex flex-row sm:flex-row  justify-center animate-pulse">
-        <p className="text-lg font-bold  sm:mb-0">Mega Sale Ends In:</p>
+      <div className=" text-white py-4 px-2 gap-4 items-center flex flex-row sm:flex-row  justify-center animate-pulse">
+        <p className="  sm:mb-0">Mega Sale Ends In:</p>
         <div className="flex gap-3 text-lg font-mono">
           <div className="bg-white text-black px-3 py-1 rounded-md">
             {String(timeLeft.hours).padStart(2, "0")}h

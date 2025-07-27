@@ -55,7 +55,7 @@ export default function Home() {
   }, 0);
 
   return (
-    <main className="min-h-screen text-white p-4 sm:p-8">
+    <main className="min-h-screen text-white ">
       <div className="flex flex-col gap-6 max-w-4xl mx-auto">
         {products.map((product) => {
           const isSelected = selectedItems.includes(product.id);
