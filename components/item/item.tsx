@@ -63,14 +63,14 @@ export default function Home() {
           return (
             <div
               key={product.id}
-              className={`p-2 mb-4 rounded-md ${
+              className={`p-4 px-6 mb-4 rounded-md ${
                 isSelected
                   ? "bg-neutral-950/80 border-2 border-white/20"
                   : "bg-neutral-900/80"
               }`}
             >
               <div className="flex flex-col sm:flex-row">
-                <div className="flex flex-row gap-2 justify-start">
+                <div className="flex flex-row gap-2 justify-start mb-2">
                   <input
                     type="checkbox"
                     checked={isSelected}
@@ -155,15 +155,18 @@ export default function Home() {
                       </div>
                     )}
                   </div>{" "}
-                  <div className="flex flex-col items-end text-sm mt-2">
+                  <div className="flex flex-col items-end  mt-2">
                     {" "}
-                    <p className="text-xs text-neutral-400">
+                    <p className=" text-neutral-400">
                       {product.freeShipping
                         ? "FREE SHIPPING!"
                         : "₱100 Shipping for single order "}
                     </p>
                     Item subtotal: ₱
-                    {isSelected ? (product.price * qty).toFixed(2) : "0.00"} PHP
+                    {isSelected
+                      ? " " + (product.price * qty).toFixed(2)
+                      : "0.00"}{" "}
+                    PHP
                   </div>{" "}
                 </div>
               </div>
