@@ -18,11 +18,13 @@ export default function Home() {
         allowFullScreen
         className="w-full h-full"
       ></iframe> */}
+
       <Promo />{" "}
-      <div className="grid grid-cols-1 sm:grid-cols-1 p-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-1">
         <Item />
       </div>
-      <div className="flex items-center justify-center h-full">
+      <div className="flex flex-col items-center justify-center h-full my-5 gap-2">
+        <p className="text-2xl font-bold">Size chart</p>
         <Image src="/sizechart.png" width={700} height={600} alt="size-chart" />
       </div>
       <Form />{" "}

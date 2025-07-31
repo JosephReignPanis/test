@@ -68,7 +68,7 @@ export default function Form() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col">
           <div className="flex flex-col items-center text-center">
             <p className="text-lg sm:text-2xl font-bold">
               Please Enter your details for delivery
@@ -84,7 +84,7 @@ export default function Form() {
               <p className="text-lg font-bold">Name</p>
               <p className="text-lg font-bold text-red-600">*</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
               <div>
                 <input
                   name="firstName"
@@ -115,7 +115,7 @@ export default function Form() {
           </div>
 
           {/* Email and Contact */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mb-4">
             <div>
               <p className="text-lg font-bold">Email Address</p>
               <input
@@ -147,9 +147,9 @@ export default function Form() {
           </div>
 
           {/* Address */}
-          <div className="grid grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 gap-2 sm:gap-4 mb-4">
             <div>
-              <p className="text-lg font-bold">Full Address</p>
+              <p className="text-lg font-bold ">Full Address</p>
               <input
                 name="fullAddress"
                 type="text"
@@ -173,7 +173,7 @@ export default function Form() {
               />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
               <div>
                 <input
                   name="city"
@@ -216,29 +216,18 @@ export default function Form() {
               )}
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <p className="text-lg font-bold">Upload Payment</p>
-
-              <input
-                name="payment"
-                type="file"
-                onChange={handleChange}
-                className="bg-white rounded-sm p-2 text-black w-full"
-                placeholder="example@example.com"
-              />
-            </div>
-            <div className="flex flex-col gap-4">
-              <Image src={"/qrcode.png"} width={500} height={500} alt="test" />
-              <div className="flex flex-row w-full border border-neutral-800 bg-white rounded-md text-black ">
-                <label
-                  htmlFor="file-upload"
-                  className="w-full items-center p-4 text-center"
-                >
-                  <i className="fa fa-cloud-upload"></i> Custom Upload
-                </label>
-                <input id="file-upload" type="file" accept=".png, .jpeg" />
-              </div>
+          <div className="flex flex-col gap-2 justify-center items-center">
+            {" "}
+            <p className="text-lg font-bold">Upload Payment</p>
+            <Image src={"/qrcode.png"} width={500} height={500} alt="test" />
+            <div className="flex flex-row w-full border border-neutral-800 bg-white rounded-md text-black ">
+              <label
+                htmlFor="file-upload"
+                className="w-full items-center p-4 text-center"
+              >
+                <i className="fa fa-cloud-upload"></i> Upload your Payment here
+              </label>
+              <input id="file-upload" type="file" accept=".png, .jpeg" />
             </div>
           </div>
           <button

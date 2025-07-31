@@ -2,8 +2,16 @@ import Image from "next/image";
 export default function Promo() {
   return (
     <>
-      <div className="flex flex-col gap-4">
-        <video src="/movie.mp4" width="320" height="240" className="w-full" />
+      <div className="flex flex-col gap-4 mb-4">
+        <video
+          autoPlay
+          loop
+          muted
+          src="/movie.mp4"
+          width="320"
+          height="240"
+          className="w-full"
+        />
         <Image
           src={"/item-slideshow.gif"}
           width={200}
